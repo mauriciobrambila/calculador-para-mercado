@@ -2,26 +2,35 @@
   "expo": {
     "name": "App Mercado",
     "slug": "aplicativoMercado",
-    "version": "1.0.0",
+    "version": "1.0.11",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "android": {
       "package": "com.mauricio2025.appmercado",
-      "versionCode": 1,
+      "versionCode": 11,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "softwareKeyboardLayoutMode": "resize"
     },
     "ios": {
       "supportsTablet": true
     },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "minSdkVersion": 24,
+            "enable16kPageSupport": true
+          }
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "34ae94c3-7638-41b5-a3f0-776fb8882f96"

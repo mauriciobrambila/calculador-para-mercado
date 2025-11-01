@@ -42,75 +42,94 @@ export default function Calculadora() {
           source={require('../../assets/logo.png')} 
           style={styles.logo} 
         />
+
         <View style={styles.headerTextContainer}>
-          <Text style={styles.subHeaderText}>Calculadora</Text>
+          <Text style={styles.subHeaderText}> Calculadora</Text>
         </View>
       </View>
+
       <View style={styles.display}>
         <Text style={styles.displayText}>{expression}</Text>
-        {result !== null && <Text style={styles.result}>Resultado: {result}</Text>}
-      </View>
+       </View>
+
       <View style={styles.buttonContainer}>
         <View style={styles.row}>
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('7')}>
             <Text style={styles.buttonText}>7</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('8')}>
             <Text style={styles.buttonText}>8</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('9')}>
             <Text style={styles.buttonText}>9</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.operationButton]} onPress={() => handlePress('/')}>
             <Text style={styles.buttonText}>/</Text>
           </TouchableOpacity>
         </View>
+
         <View style={styles.row}>
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('4')}>
             <Text style={styles.buttonText}>4</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('5')}>
             <Text style={styles.buttonText}>5</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('6')}>
             <Text style={styles.buttonText}>6</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.operationButton]} onPress={() => handlePress('*')}>
             <Text style={styles.buttonText}>*</Text>
           </TouchableOpacity>
         </View>
+
         <View style={styles.row}>
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('1')}>
             <Text style={styles.buttonText}>1</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('2')}>
             <Text style={styles.buttonText}>2</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('3')}>
             <Text style={styles.buttonText}>3</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.operationButton]} onPress={() => handlePress('-')}>
             <Text style={styles.buttonText}>-</Text>
           </TouchableOpacity>
         </View>
+
         <View style={styles.row}>
           <TouchableOpacity style={[styles.button, styles.numberButton]} onPress={() => handlePress('0')}>
             <Text style={styles.buttonText}>0</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.operationButton]} onPress={() => handleCalculate()}>
             <Text style={styles.buttonText}>=</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.operationButton]} onPress={() => handlePress('+')}>
             <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={[styles.button, styles.deleteButton]} onPress={() => handleDelete()}>
             <Text style={styles.buttonText}>DEL</Text>
           </TouchableOpacity>
         </View>
       </View>
+
       <TouchableOpacity style={styles.clearButton} onPress={handleClearHistory}>
         <Text style={styles.clearButtonText}>Limpar Histórico</Text>
       </TouchableOpacity>
+
       <FlatList
         data={history}
         keyExtractor={(item, index) => index.toString()}
@@ -129,7 +148,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    padding: 10, // Reduzindo o padding geral
+    padding: 20, // Reduzindo o padding geral
     marginTop: 20,
   },
   header: {
@@ -138,9 +157,9 @@ const styles = StyleSheet.create({
     marginBottom: 10, // Reduzindo o marginBottom
   },
   logo: {
-    width: 80, 
-    height: 50, 
-    marginRight: 10,
+    width: 60, 
+    height: 60, 
+    marginRight: 20,
   },
   headerText: {
     fontSize: 24, // Reduzindo o tamanho da fonte
@@ -150,14 +169,14 @@ const styles = StyleSheet.create({
   subHeaderText: {
     fontSize: 26, // Reduzindo o tamanho da fonte
     fontWeight: 'bold',
-    color: '#008000',
+    color: '#006990',
   },
   display: {
     backgroundColor: '#f0f0f0',
-    borderRadius: 10,
-    marginBottom: 10, // Reduzindo o marginBottom
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+    borderRadius: 12,
+    marginBottom: 20, // Reduzindo o marginBottom
+    paddingHorizontal: 80,
+    paddingVertical: 6,
     alignItems: 'flex-end',
   },
   displayText: {
@@ -176,38 +195,38 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'space-around', // Alinhando os botões na linha
-    marginBottom: 10, // Reduzindo o marginBottom
+    marginBottom: 6, // Reduzindo o marginBottom
   },
   button: {
-    paddingVertical: 20,
+    paddingVertical: 18,
     paddingHorizontal: 30,
-    borderRadius: 10,
-    marginLeft: 13
+    borderRadius: 18,
+    marginLeft: 8
   },
   buttonText: {
     color: '#fff',
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: 'bold',
   },
   numberButton: {
-    backgroundColor: '#4CAF50', // Amarelo
+    backgroundColor: '#006990', // Amarelo
   },
   operationButton: {
-    backgroundColor: '#8990a2', // Azul
+    backgroundColor: '#9990a2', // Azul
   },
   deleteButton: {
     backgroundColor: 'red',
-    borderRadius: 40,
+    borderRadius: 28,
     paddingVertical: 20,
     paddingHorizontal: 17,
   
   },
   clearButton: {
-    backgroundColor: '#008000', // Verde
-    borderRadius: 10,
+    backgroundColor: '#006990', // Verde
+    borderRadius: 18,
     paddingVertical: 10,
     alignItems: 'center',
-    marginBottom: 15 // Reduzindo o marginBottom
+    marginBottom: 8 // Reduzindo o marginBottom
   },
   clearButtonText: {
     color: '#fff',
@@ -218,10 +237,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 1,
     borderRadius: 5,
-    marginBottom: 10,
+    marginBottom: 6,
   },
   historyText: {
     fontSize: 18,
-    color: '#333',
+    color: '#633',
   },
 });

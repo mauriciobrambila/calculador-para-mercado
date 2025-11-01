@@ -11,9 +11,9 @@ function CustomTabIcon({ source, focused }) {
       <Image
         source={source}
         style={{
-          width: focused ? 30 : 25,
-          height: focused ? 30 : 25,
-          tintColor: focused ? '#fff' : 'rgba(255, 255, 255, 0.7)',
+          width: focused ? 40 : 40,
+          height: focused ? 44 : 44,
+          tintColor: focused ? '#fff' : 'rgba(255, 255, 255, 0.9)',
         }}
       />
     </View>
@@ -25,19 +25,18 @@ export default function Routes() {
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: '#008000',
+          backgroundColor: '#006990',
           borderTopColor: 'transparent',
-          paddingBottom: 5,
-          paddingTop: 5,
-          height: 60,
+          paddingBottom: 36,
+          height: 100,
         },
         tabBarActiveTintColor: '#fff',
-        tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.7)',
+        tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.9)',
       }}
     >
 
       <Tab.Screen
-        name="Lista"
+        name="Lista  "
         component={Lista}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -51,7 +50,7 @@ export default function Routes() {
       />
 
       <Tab.Screen
-        name="Calculadora"
+        name="Calculadora  "
         component={Calculadora}
         options={{
           tabBarIcon: ({ focused }) => (

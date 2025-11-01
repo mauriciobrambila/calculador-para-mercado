@@ -32,7 +32,7 @@ export default function Lista() {
         <Image source={paoDeAcucarLogo} style={styles.logo} />
         <View>
           <Text style={styles.subtitle}>Lista e calculadora</Text>
-          <Text style={styles.title}>Lista de Compras</Text>
+          <Text style={styles.title}>     Lista de Compras</Text>
         </View>
       </View>
       <View style={styles.inputContainer}>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f9f9f9',
-    padding: 20,
+    padding: 12,
     marginTop: 30,
   },
   header: {
@@ -95,12 +95,12 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 60,
-    height: 50,
-    marginRight: 10,
+    height: 60,
+    marginRight: 8,
   },
   title: {
     fontSize: 16,
-    color: '#008000',
+    color: '#006990',
     fontWeight: 'bold',
   },
   subtitle: {
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     paddingHorizontal: 30,
     borderRadius: 20,
-    marginRight: 5,
+    marginRight: 4,
     backgroundColor: '#fff',
   },
   quantityInput: {
@@ -129,15 +129,15 @@ const styles = StyleSheet.create({
     height: 50,
     borderColor: '#ccc',
     borderWidth: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 14,
     borderRadius: 20,
     backgroundColor: '#fff',
   },
   addButton: {
-    backgroundColor: '#008000',
+    backgroundColor: '#006990',
     borderRadius: 20,
     paddingVertical: 10,
-    marginBottom: 10,
+    marginBottom: 14,
   },
   addButtonText: {
     color: '#fff',
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 10,
-    paddingHorizontal: 15,
+    paddingHorizontal: 14,
     backgroundColor: '#fff',
     borderRadius: 20,
     marginBottom: 10,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   listItemText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#533',
   },
   removeButton: {
     backgroundColor: '#ff0000',
@@ -181,14 +181,14 @@ const styles = StyleSheet.create({
   },
   totalContainer: {
     marginTop: 20,
-    borderTopWidth: 1,
-    borderTopColor: '#ccc',
-    paddingTop: 10,
+    borderTopWidth: 4,
+    borderTopColor: '#006990',
+    paddingTop: 4,
     alignItems: 'center',
   },
   totalText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
+    fontSize: 20,
+    fontWeight: '800',
+    color: 'red',
   },
 });
